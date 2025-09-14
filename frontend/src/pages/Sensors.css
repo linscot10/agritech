@@ -1,0 +1,379 @@
+/* src/pages/Sensors.css */
+.sensors {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sensors-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.header-content p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+.advice-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.advice-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.advice-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.advice-message {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.latest-reading h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.reading-details {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.reading-details span {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.sensors-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.search-box svg {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0aec0;
+}
+
+.stats {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.readings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sensor-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sensor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f7fafc;
+}
+
+.reading-date,
+.reading-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.sensor-metric {
+  margin-bottom: 1.5rem;
+}
+
+.sensor-metric:last-child {
+  margin-bottom: 0;
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-level {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* Moisture levels */
+.metric-value.low {
+  color: #e53e3e;
+}
+
+.metric-value.low .metric-level {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.metric-value.moderate {
+  color: #d69e2e;
+}
+
+.metric-value.moderate .metric-level {
+  background: #fefcbf;
+  color: #744210;
+}
+
+.metric-value.high {
+  color: #38a169;
+}
+
+.metric-value.high .metric-level {
+  background: #c6f6d5;
+  color: #276749;
+}
+
+/* Temperature levels */
+.metric-value.cold {
+  color: #3182ce;
+}
+
+.metric-value.cold .metric-level {
+  background: #bee3f8;
+  color: #1c64d2;
+}
+
+.metric-value.warm {
+  color: #dd6b20;
+}
+
+.metric-value.warm .metric-level {
+  background: #feebcb;
+  color: #c45a12;
+}
+
+.metric-value.hot {
+  color: #e53e3e;
+}
+
+.metric-value.hot .metric-level {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+/* Humidity levels */
+.metric-value.dry {
+  color: #d69e2e;
+}
+
+.metric-value.dry .metric-level {
+  background: #fefcbf;
+  color: #744210;
+}
+
+.metric-value.comfortable {
+  color: #38a169;
+}
+
+.metric-value.comfortable .metric-level {
+  background: #c6f6d5;
+  color: #276749;
+}
+
+.metric-value.humid {
+  color: #3182ce;
+}
+
+.metric-value.humid .metric-level {
+  background: #bee3f8;
+  color: #1c64d2;
+}
+
+.card-warning {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: #fff5f5;
+  color: #c53030;
+  border-top: 1px solid #fed7d7;
+  font-weight: 500;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: #a0aec0;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  color: #718096;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: #4a5568;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination button:hover {
+  background: #f7fafc;
+}
+
+.pagination button.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.sensors-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 1rem;
+}
+
+.sensors-loading p {
+  color: #718096;
+}
+
+@media (max-width: 768px) {
+  .sensors {
+    padding: 1rem;
+  }
+  
+  .sensors-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .sensors-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-box {
+    max-width: none;
+  }
+  
+  .readings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .reading-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
