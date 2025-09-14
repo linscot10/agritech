@@ -2,10 +2,16 @@
 import api from './api';
 
 export const authAPI = {
-  login: (email, password) => {
-    return api.post('/auth/login', { email, password })
-      .then(response => response.data);
+  register: (userData) => {
+    return api.post('/auth/register', userData)
+      .then(response => response.data)
+      .catch(error => {
+        console.error('API Registration Error:', error);
+        throw error;
+      });
   },
+};
+
   
   register: (userData) => {
     return api.post('/auth/register', userData)
