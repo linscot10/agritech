@@ -144,7 +144,7 @@ const ProductModal = ({ product, onClose, onSave }) => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="price">Price ($) *</label>
+              <label htmlFor="price">Price (Ksh) *</label>
               <input
                 type="number"
                 id="price"
