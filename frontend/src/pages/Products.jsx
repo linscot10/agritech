@@ -203,7 +203,7 @@ const ProductCard = ({ product, onEdit, onDelete, userRole }) => (
       <div className="product-meta">
         <div className="meta-item">
           <span className="meta-label">Price:</span>
-          <span className="meta-value">${product.price}</span>
+          <span className="meta-value">Ksh{product.price}</span>
         </div>
         <div className="meta-item">
           <span className="meta-label">Stock:</span>

@@ -114,7 +114,7 @@ const Dashboard = () => {
         <StatCard
           icon={BarChart3}
           title="Total Revenue"
-          value={`$${stats.totalRevenue.toLocaleString()}`}
+          value={`${stats.totalRevenue.toLocaleString()}`}
           trend={15}
         />
         {user.role === 'admin' && (
@@ -145,7 +145,7 @@ const Dashboard = () => {
                     <p>Status: <span className={`status-${order.status}`}>{order.status}</span></p>
                   </div>
                   <div className="item-value">
-                    ${order.totalPrice}
+                    Ksh{order.totalPrice}
                   </div>
                 </div>
               ))
@@ -163,7 +163,7 @@ const Dashboard = () => {
                 <div key={product._id} className="recent-item">
                   <div className="item-info">
                     <h4>{product.name}</h4>
-                    <p>Price: ${product.price}</p>
+                    <p>Price: Ksh{product.price}</p>
                   </div>
                   <div className="item-value">
                     Qty: {product.quantity}

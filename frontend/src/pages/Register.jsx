@@ -16,7 +16,7 @@
 //   const [showPassword, setShowPassword] = useState(false)
 //   const [error, setError] = useState('')
 //   const [loading, setLoading] = useState(false)
-  
+
 //   const { register } = useAuth()
 //   const navigate = useNavigate()
 
@@ -44,7 +44,7 @@
 //     setLoading(false)
 //   }
 
-  
+
 //   return (
 //     <div className="auth-container">
 //       <div className="auth-card">
@@ -180,7 +180,7 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
-  
+
   const { register } = useAuth()
   const navigate = useNavigate()
 
@@ -199,7 +199,7 @@ const Register = () => {
 
     try {
       const result = await register(formData)
-      
+
       if (result.success) {
         navigate('/dashboard')
       } else {
@@ -280,7 +280,6 @@ const Register = () => {
             >
               <option value="farmer">Farmer</option>
               <option value="admin">Admin</option>
-              <option value="tech">Tech Support</option>
             </select>
           </div>
 
@@ -307,8 +306,8 @@ const Register = () => {
             </div>
           </div>
 
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             className="auth-button"
             disabled={loading}
           >

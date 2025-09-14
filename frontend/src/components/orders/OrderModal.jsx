@@ -99,7 +99,7 @@ const OrderModal = ({ products, onClose, onOrderCreated }) => {
                 .filter(product => product.quantity > 0)
                 .map(product => (
                   <option key={product._id} value={product._id}>
-                    {product.name} - ${product.price} (Stock: {product.quantity})
+                    {product.name} - KSh{product.price} (Stock: {product.quantity})
                   </option>
                 ))
               }
@@ -113,7 +113,7 @@ const OrderModal = ({ products, onClose, onOrderCreated }) => {
               <div className="details-grid">
                 <div className="detail-item">
                   <span className="label">Price:</span>
-                  <span className="value">${selectedProduct.price}</span>
+                  <span className="value">Ksh{selectedProduct.price}</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Available:</span>
@@ -147,7 +147,7 @@ const OrderModal = ({ products, onClose, onOrderCreated }) => {
               <h4>Order Summary</h4>
               <div className="summary-item">
                 <span>Unit Price:</span>
-                <span>${selectedProduct.price}</span>
+                <span>Ksh{selectedProduct.price}</span>
               </div>
               <div className="summary-item">
                 <span>Quantity:</span>
@@ -155,7 +155,7 @@ const OrderModal = ({ products, onClose, onOrderCreated }) => {
               </div>
               <div className="summary-item total">
                 <span>Total:</span>
-                <span>${calculateTotal().toFixed(2)}</span>
+                <span>Ksh{calculateTotal().toFixed(2)}</span>
               </div>
             </div>
           )}
